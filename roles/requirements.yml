@@ -1,0 +1,7 @@
+- src: https://github.com/tryfan/ansible-role-morpheus-virtualimages
+
+- src: https://github.com/tryfan/ansible-role-morpheus-nodetypes
+
+- src: https://github.com/tryfan/ansible-role-morpheus-layouts
+
+- src: https://github.com/tryfan/ansible-role-morpheus-instancetypes

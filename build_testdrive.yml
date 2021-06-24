@@ -1,0 +1,6 @@
+- hosts: localhost
+  roles:
+    - ansible-role-morpheus-virtualimages
+    - ansible-role-morpheus-nodetypes
+    - ansible-role-morpheus-instancetypes
+    - ansible-role-morpheus-layouts

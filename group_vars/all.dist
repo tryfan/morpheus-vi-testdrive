@@ -1,0 +1,32 @@
+morpheus_url: ''
+morpheus_token: ''
+verify_ssl: false
+
+instance_types:
+  - name: Morpheus Test Drive Builds
+    code: morphtdbuilds
+    category: OS
+    featured: "true"
+
+virtual_images:
+  - name: "Morpheus TD CentOS 7.9 v1 VI"
+    imageType: "vmdk"
+    isCloudInit: "true"
+    installAgent: "true"
+    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-centos-7_9-v1-x86_64.ova"
+
+node_types:
+  - name: "Morpheus TD CentOS 7.9 v1 NODE"
+    shortName: morphtdcent79
+    provisionTypeCode: vmware
+    imageType: vmware
+    containerVersion: 7.9
+    virtual_image_name: "Morpheus TD CentOS 7.9 v1 VI"
+
+layouts:
+  - name: Morpheus TD CentOS
+    instanceVersion: 7.9-v1
+    memoryRequirement: 512
+    provisionTypeCode: vmware
+    nodetype_name: "Morpheus TD CentOS 7.9 v1 NODE"
+    instancetypecode: morphtdbuilds
