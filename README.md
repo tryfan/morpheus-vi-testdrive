@@ -8,7 +8,7 @@ Put your Morpheus URL and API key into `group_vars/all`
 
 Now run:
 ```
-ansible-galaxy install -r roles/requirements.yml --roles-path=roles/
+ansible-galaxy install -r requirements.yml --roles-path=roles/
 ansible-playbook -i inv build_testdrive.yml
 ```
 
