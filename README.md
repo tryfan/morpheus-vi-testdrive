@@ -2,9 +2,7 @@
 
 ## Quickstart
 
-Copy `group_vars/all.dist` to `group_vars/all`
-
-Put your Morpheus URL and API key into `group_vars/all`
+Put your Morpheus URL and API key into `group_vars/all` or supply them on the command line with `ansible-playbook`
 
 Now run:
 ```
