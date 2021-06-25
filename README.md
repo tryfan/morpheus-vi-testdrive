@@ -5,7 +5,12 @@
 Put your Morpheus URL and API key into `group_vars/all` or supply them at runtime  on the command line.  
 eg. 
 ```
-ansible-playbook -e "@morpheuscreds.yml"
+echo """
+morpheus_url: 'https://morpheus.example.com'
+morpheus_token: '00000000-bfd7-4be0-bb24-000000000000'
+""" > morpheuscreds.yml
+
+ansible-playbook -e "@morpheuscreds.yml" -e "@imagesets/vmware.yml" -i inv build_testdrive.yml
 ```
 
 Now run:
