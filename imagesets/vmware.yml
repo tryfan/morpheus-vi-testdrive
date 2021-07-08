@@ -9,37 +9,43 @@ virtual_images:
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-centos-7_9-v1-x86_64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-centos-7_9-v1-x86_64.ova"
 
   - name: "Morpheus TD CentOS 8.4 v1 VI"
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-centos-8_4-v1-x86_64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-centos-8_4-v1-x86_64.ova"
+
+  - name: "Morpheus TD Rocky 8.4 v1 VI"
+    imageType: "vmdk"
+    isCloudInit: "true"
+    installAgent: "true"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-rocky-8_4-v1-x86_64.ova"
 
   - name: "Morpheus TD Debian 9.13 v1 VI"
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-debian-9_13_0-v1-amd64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-debian-9_13_0-v1-amd64.ova"
   
   - name: "Morpheus TD Debian 10.9 v1 VI"
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-debian-10_9_0-v1-amd64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-debian-10_9_0-v1-amd64.ova"
 
   - name: "Morpheus TD Ubuntu 18.04 v1 VI"
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-ubuntu-18_04-v1-amd64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-ubuntu-18_04-v1-amd64.ova"
 
   - name: "Morpheus TD Ubuntu 20.04 v1 VI"
     imageType: "vmdk"
     isCloudInit: "true"
     installAgent: "true"
-    url: "https://ncimagebucket.s3.amazonaws.com/vmware/morpheus-ubuntu-20_04-v1-amd64.ova"
+    url: "https://morpheus-image-bucket.s3.amazonaws.com/vmware/morpheus-ubuntu-20_04-v1-amd64.ova"
 
 node_types:
   - name: "Morpheus TD CentOS 7.9 v1 NODE"
@@ -55,6 +61,13 @@ node_types:
     imageType: vmware
     containerVersion: 8.4
     virtual_image_name: "Morpheus TD CentOS 8.4 v1 VI"
+
+  - name: "Morpheus TD Rocky 8.4 v1 NODE"
+    shortName: morphtdrocky84
+    provisionTypeCode: vmware
+    imageType: vmware
+    containerVersion: 8.4
+    virtual_image_name: "Morpheus TD Rocky 8.4 v1 VI"
 
   - name: "Morpheus TD Debian 9.13 v1 NODE"
     shortName: morphtddeb913
@@ -97,6 +110,13 @@ layouts:
     memoryRequirement: 1024
     provisionTypeCode: vmware
     nodetype_name: "Morpheus TD CentOS 8.4 v1 NODE"
+    instancetypecode: morphtdbuilds
+
+  - name: Morpheus TD Rocky
+    instanceVersion: 8.4-v1
+    memoryRequirement: 1024
+    provisionTypeCode: vmware
+    nodetype_name: "Morpheus TD Rocky 8.4 v1 NODE"
     instancetypecode: morphtdbuilds
 
   - name: Morpheus TD Debian
